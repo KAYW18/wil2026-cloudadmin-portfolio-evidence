@@ -25,16 +25,26 @@ Checking Block Public Access, encryption and versioning manually takes time. Aut
 The Lambda execution role will use only the permissions required to read the S3 bucket configuration and write logs to CloudWatch.
 
 ## 6. How to Run
-To be completed after creating and testing the Lambda function.
+1. Open the AWS Lambda console.
+2. Select wil-week3-s3-vault-health-check.
+3. Click the Test button.
+4. Run the S3 Vault Health Check test event.
+5. Review the execution results.
+6. Open CloudWatch Logs to view the PASS or FAIL results.
 
 ## 7. Expected Result
-The Lambda function should run successfully and report the status of the three S3 security checks.
+The Lambda function runs successfully and checks the selected S3 bucket's Block Public Access settings, SSE-S3 encryption and versioning. The results are displayed in CloudWatch Logs.
 
 ## 8. Risk Reduced
 This automation reduces the risk of overlooking important S3 security settings during manual reviews.
 
 ## 9. Evidence
-Screenshots of the Lambda function, successful test execution and CloudWatch Logs will be added here.
+- Lambda function successfully created.
+- Python automation code deployed.
+- Successful manual test execution.
+- CloudWatch Logs showing the security check results.
+- IAM role and read-only S3 permissions.
+- Resource tags applied.
 
 ## 10. Limitations
 The function only checks the selected S3 bucket's configuration. It does not automatically fix incorrect settings or monitor the entire AWS account.
